@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0
 #include <sim2b/functions/bullet.h>
 
-#include <b3RobotSimulatorClientAPI_NoGUI.h>
+#include <SharedMemory/b3RobotSimulatorClientAPI_NoGUI.h>
 
 
 struct sim2b_bullet
