@@ -17,7 +17,7 @@ if(ENABLE_BULLET)
     POST_BUILD
       COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "${CMAKE_CURRENT_BINARY_DIR}/libsim2b_bullet_ubx.so"
-        "${CMAKE_CURRENT_BINARY_DIR}/../${UBX_MODDIR_REL}/sim2b_bullet.so")
+        "${CMAKE_CURRENT_BINARY_DIR}/${UBX_MODDIR_REL}/sim2b_bullet.so")
 
   install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libsim2b_bullet_ubx.so"
           DESTINATION "${CMAKE_INSTALL_DIRECTORY}${UBX_MODDIR_REL}"
