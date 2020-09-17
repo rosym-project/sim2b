@@ -3,8 +3,8 @@ if(ENABLE_BULLET)
 
   pkg_check_modules(UBX REQUIRED ubx0)
 
-  pkg_get_variable(UBX_MODDIR ${UBX_MODULE_NAME} UBX_MODDIR)
-  pkg_get_variable(UBX_EXEC_PREFIX ${UBX_MODULE_NAME} exec_prefix)
+  pkg_get_variable(UBX_MODDIR ubx0 UBX_MODDIR)
+  pkg_get_variable(UBX_EXEC_PREFIX ubx0 exec_prefix)
 
   file(RELATIVE_PATH UBX_MODDIR_REL ${UBX_EXEC_PREFIX} ${UBX_MODDIR})
 
