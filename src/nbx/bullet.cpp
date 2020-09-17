@@ -21,9 +21,9 @@ void sim2b_bullet_configure(struct sim2b_bullet_nbx *b)
     b3RobotSimulatorClientAPI_NoGUI *sim = b->bullet->sim;
 
     // Setup the simulation
-	sim->connect(eCONNECT_DIRECT);
-	sim->resetSimulation();
-	sim->setGravity(btVector3(b->grav[0], b->grav[1], b->grav[2]));
+    sim->connect(eCONNECT_DIRECT);
+    sim->resetSimulation();
+    sim->setGravity(btVector3(b->grav[0], b->grav[1], b->grav[2]));
 
     // Load the robot from a URDF file
     b3RobotSimulatorLoadUrdfFileArgs urdf_args;

@@ -8,6 +8,7 @@
 
 int main(void)
 {
+    double gravity[3] = { 0.0, 0.0, -9.81 };
     int ctrl_mode = 2;
     double pos_msr[NR_JOINTS];
     double vel_msr[NR_JOINTS];
@@ -18,7 +19,7 @@ int main(void)
     struct sim2b_bullet_nbx sim = {
         // Configuration
         .nr_joints = NR_JOINTS,
-        .grav = { 0.0, 0.0, -9.81 },
+        .grav = gravity,
         .jnt_pos_init = (double [NR_JOINTS]) { 0.0, 1.571 },
         .urdf = "2dof.urdf",
         // Connections

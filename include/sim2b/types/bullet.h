@@ -12,8 +12,8 @@ struct sim2b_bullet_nbx
 {
     // Configuration
     int nr_joints;
-    const double grav[3];       // XYZ [m/s^2]      
-    const double *jnt_pos_init; // [m] or [rad]   
+    const double *grav;         // XYZ [m/s^2]
+    const double *jnt_pos_init; // [m] or [rad]
     const char *urdf;
     // Ports
     const int *ctrl_mode;
