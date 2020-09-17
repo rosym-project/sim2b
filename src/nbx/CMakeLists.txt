@@ -8,8 +8,16 @@ if(ENABLE_BULLET)
     ${BULLET_ROBOTICS_INCLUDE_DIRS}
   )
 
+  link_directories(
+    ${BULLET_LIBRARY_DIRS}
+    ${BULLET_ROBOTICS_LIBRARY_DIRS}
+  )
+
   add_library(sim2b_bullet SHARED bullet.cpp)
-  target_link_libraries(sim2b_bullet PRIVATE ${BULLET_ROBOTICS_LIBRARIES})
+  target_link_libraries(sim2b_bullet PRIVATE
+    ${BULLET_LIBRARIES}
+    ${BULLET_ROBOTICS_LIBRARIES}
+  )
 
 
   install(
