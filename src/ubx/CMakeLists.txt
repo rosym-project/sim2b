@@ -13,6 +13,8 @@ if(ENABLE_BULLET)
   add_library(sim2b_bullet_ubx SHARED bullet.c)
   target_link_libraries(sim2b_bullet_ubx PRIVATE sim2b_bullet ${UBX_LIBRARIES})
 
+  configure_file(ubx_env.sh.in ${CMAKE_BINARY_DIR}/ubx_env.sh)
+
   add_custom_command(TARGET sim2b_bullet_ubx
     POST_BUILD
       COMMAND ${CMAKE_COMMAND} -E copy_if_different
