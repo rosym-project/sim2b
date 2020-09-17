@@ -9,6 +9,7 @@ if(ENABLE_BULLET)
   file(RELATIVE_PATH UBX_MODDIR_REL ${UBX_EXEC_PREFIX} ${UBX_MODDIR})
 
   include_directories(${UBX_INCLUDE_DIRS})
+  link_directories(${UBX_LIBRARY_DIRS})
 
   add_library(sim2b_bullet_ubx SHARED bullet.c)
   target_link_libraries(sim2b_bullet_ubx PRIVATE sim2b_bullet ${UBX_LIBRARIES})
