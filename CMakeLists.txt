@@ -2,6 +2,7 @@ project(sim2b)
 cmake_minimum_required(VERSION 2.8)
 
 option(ENABLE_BULLET "Build Bullet interface" Off)
+option(ENABLE_UBX "Build UBX blocks" Off)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 

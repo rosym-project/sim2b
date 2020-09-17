@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0
-#include <sim2b/types/bullet_ubx.h>
+#include "bullet_ubx.h"
 
 #include <sim2b/types/bullet.h>
 #include <sim2b/functions/bullet.h>
