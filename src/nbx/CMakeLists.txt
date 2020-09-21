@@ -22,7 +22,7 @@ if(ENABLE_BULLET)
 
   install(
     TARGETS sim2b_bullet
-    EXPORT sim2b_bullet-targets
+    EXPORT sim2b-targets
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
