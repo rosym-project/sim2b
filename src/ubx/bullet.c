@@ -41,6 +41,7 @@ int sim2b_bullet_ubx_init(ubx_block_t *b) {
     goto out;
   }
   private->nr_joints = *nr_joints_temp;
+  ubx_info(b, "sim2b_bullet: simulating %d joints", private->nr_joints);
 
   const double *gravity_temp;
   int gravity_len = cfg_getptr_double(b, "gravity", &gravity_temp);
@@ -56,7 +57,8 @@ int sim2b_bullet_ubx_init(ubx_block_t *b) {
     ubx_err(b, "sim2b_bullet: if supplied, gravity must consist of three doubles");
     goto out;
   }
-
+  ubx_info(b, "sim2b_bullet: using gravity %f %f %f",
+           private->grav[0], private->grav[1], private->grav[2]);
 
   const double *jnt_pos_init_temp;
   int jnt_pos_init_len = cfg_getptr_double(b, "jnt_pos_init", &jnt_pos_init_temp);
