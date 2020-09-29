@@ -47,7 +47,12 @@ int sim2b_bullet_ubx_init(ubx_block_t *b) {
   if (gravity_len == 3) {
     private->grav = calloc(1, gravity_len * sizeof(double));
     memcpy(private->grav, gravity_temp, gravity_len * sizeof(double));
-  } else if (gravity_len != 0) {
+  } else if (gravity_len == 0) {
+    private->grav = calloc(1, 3 * sizeof(double));
+    private->grav[0] = 0;
+    private->grav[1] = 0;
+    private->grav[2] = -9.81;
+  } else {
     ubx_err(b, "sim2b_bullet: if supplied, gravity must consist of three doubles");
     goto out;
   }
