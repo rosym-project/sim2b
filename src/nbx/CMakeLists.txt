@@ -19,6 +19,10 @@ if(ENABLE_BULLET)
     ${BULLET_ROBOTICS_LIBRARIES}
   )
 
+  target_compile_options(sim2b_bullet PUBLIC
+    ${BULLET_CFLAGS}
+    ${BULLET_ROBOTICS_CFLAGS}
+  )
 
   install(
     TARGETS sim2b_bullet
