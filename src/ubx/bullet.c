@@ -8,7 +8,7 @@ struct sim2b_bullet_ubx_private {
   struct sim2b_bullet_ubx_port_cache ports;
   struct sim2b_bullet_nbx nblock;
   // Buffers
-  int nr_joints;
+  long nr_joints;
   double *grav;
   double *jnt_pos_init;
   char *urdf;
@@ -34,8 +34,8 @@ int sim2b_bullet_ubx_init(ubx_block_t *b) {
   struct sim2b_bullet_nbx *nblock = &private->nblock;
 
   // Get configuration information.
-  const int *nr_joints_temp;
-  int nr_joints_len = cfg_getptr_int(b, "nr_joints", &nr_joints_temp);
+  const long *nr_joints_temp;
+  int nr_joints_len = cfg_getptr_long(b, "nr_joints", &nr_joints_temp);
   if (nr_joints_len != 1) {
     ubx_err(b, "sim2b_bullet: nr_joints must be supplied");
     goto out;

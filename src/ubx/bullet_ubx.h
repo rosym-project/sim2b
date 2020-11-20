@@ -13,7 +13,7 @@ char sim2b_bullet_ubx_meta[] = "";
 
 /* Block configuration */
 ubx_proto_config_t sim2b_bullet_ubx_config[] = {
-  { .name = "nr_joints", .type_name = "int", .min=1, .max=1, .doc="Number of joints" },
+  { .name = "nr_joints", .type_name = "long", .min=1, .max=1, .doc="Number of joints" },
   { .name = "gravity", .type_name = "double", .min=0, .max=3, .doc="Acceleration vector for simulated gravity (XYZ [m/s^2])" },
   { .name = "jnt_pos_init", .type_name = "double", .min=1, .doc="Initial joint positions ([m] or [rad] depending on joint type)" },
   { .name = "urdf", .type_name = "char", .min=1, .doc="Path to URDF file containing a description of the robot that should be simulated" },
